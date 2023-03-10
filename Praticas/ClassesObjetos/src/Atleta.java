@@ -67,6 +67,6 @@ public abstract class Atleta {
 
     public static Date calcularProximaOlimpiada() {
         // 26/07/2024
-        Date today;
+        
     }
 }
