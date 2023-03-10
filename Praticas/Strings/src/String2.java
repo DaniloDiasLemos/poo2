@@ -9,13 +9,13 @@ public class String2 {
     // a leitura, o programa mostra os caracteres
     // e a quantidade de cada um.
 
-    static void count(String inputString) {
+    static void count(String String) {
         
         HashMap<Character, Integer> count = new HashMap<Character, Integer>();
 
-        char[] strArray = inputString.toCharArray();
+        char[] charArray = String.toCharArray();
 
-        for (char c : strArray) {
+        for (char c : charArray) {
             if (count.containsKey(c)) {
                 count.put(c, count.get(c) + 1);
             } else {
