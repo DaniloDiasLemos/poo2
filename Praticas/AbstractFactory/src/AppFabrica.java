@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
-public class AppFactory {
+public class AppFabrica {
 
     public static ClientApp configureApp() {
         CarroFactory carroFactory;
+        MotorFactory motorFactory;
+        AcessorioFactory acessorioFactory;
         ClientApp clientApp;
         Scanner sc = new Scanner(System.in);
 
@@ -15,22 +17,30 @@ public class AppFactory {
         switch (i) {
             case 1:
                 carroFactory = new CarroFordFactory();
+                motorFactory = new MotorFordFactory();
+                acessorioFactory = new AcessorioFordFactory();
                 break;
 
             case 2:
                 carroFactory = new CarroTeslaFactory();
+                motorFactory = new MotorTeslaFactory();
+                acessorioFactory = new AcessorioTeslaFactory();
                 break;
 
             case 3:
                 carroFactory = new CarroFiatFactory();
+                motorFactory = new MotorFiatFactory();
+                acessorioFactory = new AcessorioFiatFactory();
                 break;
 
             default:
                 carroFactory = new CarroFordFactory();
+                motorFactory = new MotorFordFactory();
+                acessorioFactory = new AcessorioFordFactory();
                 break;
         }
 
-        clientApp = new ClientApp(carroFactory);
+        clientApp = new ClientApp(carroFactory, motorFactory, acessorioFactory);
 
         return clientApp;
     }
