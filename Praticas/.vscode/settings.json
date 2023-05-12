@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "PrevisaoTempo/src",
+        "CriacionalBuilder/src"
+    ]
+}
